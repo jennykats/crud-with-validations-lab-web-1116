@@ -1,6 +1,7 @@
-<ul>
+<table>
+  <tbody>
 <% @songs.each do |song| %>
-<li> <%= song.title %> | <%= song.artist_name %></li>
+<tr> <%= song.title %> | <%= song.artist_name %></tr>
 <% end %>
-</ul>
-
+  </tbody>
+</table>

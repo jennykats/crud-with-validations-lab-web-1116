@@ -28,6 +28,8 @@ class SongsController < ApplicationController
 
   def destroy
     @song = Song.find(params[:id])
+    @song.destroy
+    redirect_to songs_path
   end
 
   def create
@@ -36,7 +38,7 @@ class SongsController < ApplicationController
       redirect_to @song
     else
     render :new
-    end   
+    end
   end
 
   private
