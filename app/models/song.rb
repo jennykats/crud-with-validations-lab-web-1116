@@ -13,7 +13,7 @@ private
 
   def same_details
     same_songs = Song.where(release_year: self.release_year).where(artist_name: self.artist_name).where(title: self.title)
-    if same_songs.length >= 1
+    if same_songs.length > 1
       errors.add(:title, "cannot have the same song in the same year")
     end
   end
